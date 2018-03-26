@@ -12,13 +12,13 @@
   <header>
     <nav class="navbar navbar-light bg-light">
       <div class="float-left">
-        <%= link_to (image_tag "icons8-reading-64.png", :size => "50x50"), "index" %>
+        <%= link_to (image_tag "icons8-reading-64.png", :size => "50x50"), home_index_path %>
       </div>
       <div class="float-right">
         <ul class="nav">
-          <li class="nav-item pr-4"><%= link_to "紹介", "/home/about" %></li>
+          <li class="nav-item pr-4"><%= link_to "紹介", home_about_path %></li>
           <li class="nav-item pr-4"><%= link_to "ブログ", "" %></li>
-          <li class="nav-item pr-4"><%= link_to "連絡先", "/home/contact" %></li>
+          <li class="nav-item pr-4"><%= link_to "連絡先", contact_path %></li>
         </ul>
       </div>
     </nav>
