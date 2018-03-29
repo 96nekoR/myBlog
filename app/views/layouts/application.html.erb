@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyBlog</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>MyBlog</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="float-left">
+        <%= link_to (image_tag "icons8-reading-64.png", :size => "50x50"), home_index_path %>
+      </div>
+      <div class="float-right">
+        <ul class="nav">
+          <li class="nav-item pr-4"><%= link_to "紹介", home_about_path %></li>
+          <li class="nav-item pr-4"><%= link_to "ブログ", "" %></li>
+          <li class="nav-item pr-4"><%= link_to "連絡先", contact_path %></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <%= yield %>
+</body>
 </html>
